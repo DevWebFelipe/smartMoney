@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -6,23 +7,18 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
   FlatList,
   Text,
   Button,
-  useColorScheme,
   View,
+  GestureResponderEvent,
 } from 'react-native';
 
 function App(): React.JSX.Element {
-  addEntry = () => {
-    alert('Botão clicado');
-  };
+  function addEntry(_event: GestureResponderEvent): void {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <View style={{padding: 10}}>
@@ -79,7 +75,5 @@ function App(): React.JSX.Element {
     </View>
   );
 }
-
-const styles = StyleSheet.create({});
 
 export default App;
